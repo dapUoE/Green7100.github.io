@@ -95,7 +95,7 @@
                 <a href="translations.html" class="card-link">
                     <div class="card">
                         <img src="translations.png" alt="Translations" class="card-img-top">
-                        <span class="toggle-text" onclick="toggleOverlayText(this)">👁️</span>
+                        <span class="toggle-text" onclick="toggleOverlayText(this, event)">👁️</span>
                         <div class="card-text-overlay">
                             <h5 class="card-title">Translations</h5>
                             <p>Explore AI-generated translations.</p>
@@ -107,7 +107,7 @@
                 <a href="art.html" class="card-link">
                     <div class="card">
                         <img src="mount_fuji_qr.jpg" alt="Art" class="card-img-top">
-                        <span class="toggle-text" onclick="toggleOverlayText(this)">👁️</span>
+                        <span class="toggle-text" onclick="toggleOverlayText(this, event)">👁️</span>
                         <div class="card-text-overlay">
                             <h5 class="card-title">Art</h5>
                             <p>View AI-generated art pieces.</p>
@@ -170,7 +170,7 @@
         });
     </script>
     <script>
-        function toggleOverlayText(element) {
+        function toggleOverlayText(element, event) {
             // Get the card-text-overlay element
             const overlayText = element.closest('.card').querySelector('.card-text-overlay');
             
@@ -180,7 +180,11 @@
             } else {
                 overlayText.style.display = 'none';
             }
+        
+            // Prevent the event from bubbling up to parent elements
+            event.stopPropagation();
         }
+        
         
     </script>
 </body>
