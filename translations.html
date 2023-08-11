@@ -6,12 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translations - AI Content Hub</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- ... Your existing styles ... -->
+    <style>
+        body { background-color: #FAF3E0; color: #333; }
+        .navbar { background-color: #F5E7CA; }
+        .card { border-color: #E9DAC8; }
+        .btn-primary { background-color: #E9DAC8; border-color: #E9DAC8; color: #333; }
+        .btn-primary:hover { background-color: #D9C8B8; border-color: #D9C8B8; }
+        title { color: #000000; }
+        .navbar-brand { color: #333; }
+        .navbar-brand:hover { color: #000000; }
+        .dropdown-menu { background-color: #ffffff; }
+        .dropdown-item { color: #333; }
+        .dropdown-item:hover { background-color: #E9DAC8; }
+        .card-body { background-color: #F5E7CA; }
+    </style>
 </head>
 
 <body>
 
-    <!-- ... Your existing navbar ... -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Greeny AI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="translations.html">Translations</a>
+                        <a class="dropdown-item" href="#">Art</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container mt-5">
         <div class="row">
@@ -31,7 +64,45 @@
         <!-- Future translations sections can be added below as new rows/cards similar to the Re:Zero section -->
     </div>
 
-    <!-- ... Your existing scripts and footer ... -->
+    <footer class="mt-5 pt-4 pb-4" style="background-color: #F5E7CA;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Greeny AI is a platform dedicated to showcasing AI-generated content, and providing services which people will find useful. If you would like to make a request, you can contact me with my details below, or donate with a comment.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="translations.html">Translations</a></li>
+                        <li><a href="art.html">Art</a></li>
+                        <li><a href="about.hmtl">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: info@greenyai.com</p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#"><img src="path_to_twitter_icon" alt="Twitter"></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="path_to_facebook_icon" alt="Facebook"></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="path_to_linkedin_icon" alt="LinkedIn"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Donate</h5>
+                    <p>Donate to support the development of Greeny AI, or request a service.</p>
+
+
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <p>&copy; 2023 Greeny AI. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

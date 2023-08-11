@@ -18,6 +18,28 @@
         .dropdown-item { color: #333; }
         .dropdown-item:hover { background-color: #E9DAC8; }
         .card-body { background-color: #F5E7CA; }
+        /* Image hover effect */
+        .card-img-top:hover {
+            transform: scale(1.1);
+            transition: transform .3s;
+        }
+
+        /* Overlaid text on image */
+        .card-text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(245, 231, 202, 0.7); /* Semi-transparent background */
+            padding: 10px;
+            color: #333;
+        }
+
+        /* Positioning image and text */
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -47,27 +69,30 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
-                    <img src="translations.png" alt="Translations" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Translations</h5>
-                        <p class="card-text">Explore AI-generated translations.</p>
-                        <a href="#" class="btn btn-primary">Explore</a>
+                <a href="translations.html" class="card-link">
+                    <div class="card">
+                        <img src="translations.png" alt="Translations" class="card-img-top">
+                        <div class="card-text-overlay">
+                            <h5 class="card-title">Translations</h5>
+                            <p>Explore AI-generated translations.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-4">
-                <div class="card">
-                    <img src="mount_fuji_qr.jpg" alt="Art" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Art</h5>
-                        <p class="card-text">View AI-generated art pieces.</p>
-                        <a href="#" class="btn btn-primary">Explore</a>
+                <a href="art.html" class="card-link">
+                    <div class="card">
+                        <img src="mount_fuji_qr.jpg" alt="Art" class="card-img-top">
+                        <div class="card-text-overlay">
+                            <h5 class="card-title">Art</h5>
+                            <p>View AI-generated art pieces.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
