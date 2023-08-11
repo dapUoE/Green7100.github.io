@@ -48,6 +48,18 @@
             position: relative;
             overflow: hidden;
         }
+
+        /* Toggle text */
+        .toggle-text {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.7);  /* semi-transparent background */
+            border-radius: 50%;  /* makes it circular */
+            padding: 5px 10px;
+        }
+        
     </style>
 </head>
 <body>
@@ -89,8 +101,8 @@
                         </div>
                     </div>
                 </a>
+                <span class="toggle-text" onclick="toggleOverlayText(this)">👁️</span>
             </div>
-            <div class="spacer"></div>
             <div class="col-md-4">
                 <a href="art.html" class="card-link">
                     <div class="card">
@@ -101,6 +113,7 @@
                         </div>
                     </div>
                 </a>
+                <span class="toggle-text" onclick="toggleOverlayText(this)">👁️</span>
             </div>
         </div>
     </div>
@@ -155,6 +168,20 @@
                 e.preventDefault();
             }
         });
+    </script>
+    <script>
+        function toggleOverlayText(element) {
+            // Get the card-text-overlay element
+            const overlayText = element.closest('.card').querySelector('.card-text-overlay');
+            
+            // Toggle visibility
+            if (overlayText.style.display === 'none') {
+                overlayText.style.display = 'block';
+            } else {
+                overlayText.style.display = 'none';
+            }
+        }
+        
     </script>
 </body>
 </html>
