@@ -45,6 +45,10 @@
 <body>
 
     <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="transparent_logo.png" alt="Greeny AI Logo" width="30" height="30" class="d-inline-block align-top mr-2">
+            Greeny AI
+        </a>
         <a class="navbar-brand" href="#">Greeny AI</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
             <span class="navbar-toggler-icon"></span>
@@ -93,10 +97,6 @@
         </div>
     </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <footer class="mt-5 pt-4 pb-4" style="background-color: #F5E7CA;">
         <div class="container">
             <div class="row">
@@ -136,5 +136,17 @@
             </div>
         </div>
     </footer>    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
