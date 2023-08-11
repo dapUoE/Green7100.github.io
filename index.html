@@ -92,29 +92,29 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4">
-                <a href="translations.html" class="card-link">
-                    <div class="card">
+                <div class="card">
+                    <a href="translations.html">
                         <img src="translations.png" alt="Translations" class="card-img-top">
-                        <span class="toggle-text" onclick="toggleOverlayText(this, event)">👁️</span>
-                        <div class="card-text-overlay">
-                            <h5 class="card-title">Translations</h5>
-                            <p>Explore AI-generated translations.</p>
-                        </div>
+                    </a>
+                    <span class="toggle-text" onclick="toggleOverlayText(this, event)">👁️</span>
+                    <div class="card-text-overlay">
+                        <h5 class="card-title">Translations</h5>
+                        <p>Explore AI-generated translations.</p>
                     </div>
-                </a>
-            </div>
+                </div>
+            </div>            
             <div class="col-md-4">
-                <a href="art.html" class="card-link">
-                    <div class="card">
+                <div class="card">
+                    <a href="art.html">
                         <img src="mount_fuji_qr.jpg" alt="Art" class="card-img-top">
-                        <span class="toggle-text" onclick="toggleOverlayText(this, event)">👁️</span>
-                        <div class="card-text-overlay">
-                            <h5 class="card-title">Art</h5>
-                            <p>View AI-generated art pieces.</p>
-                        </div>
+                    </a>
+                    <span class="toggle-text" onclick="toggleOverlayText(this, event)">👁️</span>
+                    <div class="card-text-overlay">
+                        <h5 class="card-title">Art</h5>
+                        <p>View AI-generated art pieces.</p>
                     </div>
-                </a>
-            </div>
+                </div>
+            </div>            
         </div>
     </div>
 
@@ -180,10 +180,12 @@
             } else {
                 overlayText.style.display = 'none';
             }
-        
-            // Prevent the event from bubbling up to parent elements
+            
+            // Prevent the event from bubbling up to parent elements and prevent the default behavior of the anchor tag
             event.stopPropagation();
+            event.preventDefault();
         }
+        
         
         
     </script>
