@@ -1,0 +1,56 @@
+
+body { background-color: #FAF3E0; color: #333; }
+.navbar { background-color: #F5E7CA; }
+.card { border-color: #E9DAC8; }
+.btn-primary { background-color: #E9DAC8; border-color: #E9DAC8; color: #333; }
+.btn-primary:hover { background-color: #D9C8B8; border-color: #D9C8B8; }
+title { color: #000000; }
+.navbar-brand { color: #333; }
+.nav-item { color: #333; }
+.navbar-brand img {
+    background-color: #F5E7CA;
+    border: none; 
+}
+.navbar-brand:hover { color: #000000; }
+.dropdown-menu { background-color: #ffffff; }
+.dropdown-item { color: #333; }
+.dropdown-item:hover { background-color: #E9DAC8; }
+.card-body { background-color: #F5E7CA; }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'%3e%3c/path%3e%3c/svg%3e");
+}
+
+/* Image hover effect */
+.card-img-top:hover {
+    transform: scale(1.1);
+    transition: transform .3s;
+}
+
+/* Overlaid text on image */
+.card-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(245, 231, 202, 0.9); /* Semi-transparent background */
+    padding: 10px;
+    color: #333;
+}
+
+/* Positioning image and text */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Toggle text */
+.toggle-text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);  /* semi-transparent background */
+    border-radius: 50%;  /* makes it circular */
+    padding: 5px 10px;
+}
+
