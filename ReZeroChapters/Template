@@ -52,19 +52,17 @@
                 <div class="col-md-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="translations.html">Translations</a></li>
-                        <li><a href="art.html">Art</a></li>
-                        <li><a href="about.hmtl">About</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../translations.html">Translations</a></li>
+                        <li><a href="../art.html">Art</a></li>
+                        <li><a href="../about.hmtl">About</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Contact</h5>
                     <p>Email: info@greenyai.com</p>
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#"><img src="path_to_twitter_icon" alt="Twitter"></a></li>
-                        <li class="list-inline-item"><a href="#"><img src="path_to_facebook_icon" alt="Facebook"></a></li>
-                        <li class="list-inline-item"><a href="#"><img src="path_to_linkedin_icon" alt="LinkedIn"></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/greenyaionline"><img src="assets/twitter.png" alt="Twitter" width="50"></a></li>
                     </ul>
                 </div>
                 <div>
