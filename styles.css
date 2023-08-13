@@ -71,5 +71,9 @@ title { color: #000000; }
     text-align: justify; /* This justifies the text inside the <p> tags. */
 }
     
+/* spacer */
+.spacer {
+    height: 20px; /* Adjust as needed */
+}
 
 
