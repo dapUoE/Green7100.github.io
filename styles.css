@@ -112,3 +112,8 @@ title { color: #000000; }
     margin: 0 auto; /* Center the tweet */
     max-width: 300px; /* Limit the width */
 }
+.tweet-container {
+    text-align: center; /* centers inline or inline-block elements */
+    margin: 0 auto; /* centers block-level elements */
+    max-width: 300px;
+}
