@@ -95,7 +95,7 @@ title { color: #000000; }
 }
 
 .chapter-card {
-    background-color: #F5E7CA; /* Adjusted color */
+    background-color: #e9dbbf; /* Adjusted color */
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -106,4 +106,9 @@ title { color: #000000; }
 
 .chapter-card ul li a:hover {
     text-decoration: underline;
+}
+
+.twitter-tweet {
+    margin: 0 auto; /* Center the tweet */
+    max-width: 300px; /* Limit the width */
 }
