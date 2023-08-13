@@ -22,6 +22,7 @@ function toggleOverlayText(element, event) {
     event.preventDefault();
 }
 
+/* Change chapter numbers */
 
 document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prevChapter');
