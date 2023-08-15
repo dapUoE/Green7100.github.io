@@ -77,3 +77,43 @@ title { color: #000000; }
 }
 
 
+/* chapter content list */
+.chapter-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chapter-card ul li {
+    margin-bottom: 10px;
+}
+
+.chapter-card {
+    background-color: #e9dbbf; /* Adjusted color */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the card */
+    max-width: 600px; /* Limit the width */
+}
+
+
+.chapter-card ul li a:hover {
+    text-decoration: underline;
+}
+
+.twitter-tweet {
+    margin: 0 auto; /* Center the tweet */
+    max-width: 300px; /* Limit the width */
+}
+.tweet-container {
+    text-align: center; /* centers inline or inline-block elements */
+    margin: 0 auto; /* centers block-level elements */
+    max-width: 300px;
+}
