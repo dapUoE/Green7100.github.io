@@ -117,3 +117,8 @@ title { color: #000000; }
     margin: 0 auto; /* centers block-level elements */
     max-width: 300px;
 }
+
+.chapter-image {
+    margin: 0 auto; /* Center the image */
+    max-width: 600px; /* Limit the width */
+}
