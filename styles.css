@@ -118,10 +118,13 @@ title { color: #000000; }
     max-width: 300px;
 }
 
-.chapter-image {
-    margin: 0 auto; /* Center the image */
-    max-width: 600px; /* Limit the width */
+.chapter-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
+
 
 .chapter-image-credits {
     text-align: center; /* centers inline or inline-block elements */
