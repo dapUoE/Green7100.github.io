@@ -122,3 +122,9 @@ title { color: #000000; }
     margin: 0 auto; /* Center the image */
     max-width: 600px; /* Limit the width */
 }
+
+.chapter-image-credits {
+    text-align: center; /* centers inline or inline-block elements */
+    margin: 0 auto; /* centers block-level elements */
+    max-width: 600px;
+}
