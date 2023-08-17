@@ -121,7 +121,7 @@ title { color: #000000; }
 .chapter-image img {
     display: block;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 300px;
     height: auto;
 }
 
