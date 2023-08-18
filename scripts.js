@@ -95,10 +95,10 @@ window.addEventListener("load", function(){
           "background": "#4b81e8"
         }
       },
-      "type": "opt-in",  // This makes sure that cookies are disabled until the user opts-in
+      "type": "opt-out",  // This makes sure that cookies are disabled until the user opts-in
       "position": "bottom-right",
       "content": {
-        "message": "This site uses cookies for analytics and comments.",
+        "message": "This site uses cookies in order see how many users the website gets, like views on Youtube. If you are uncomfortable with this, you can Deny access.",
         "allow": "Allow selected",
         "deny": "Deny",
         "link": "Learn More",
