@@ -59,3 +59,26 @@ function getCurrentChapterNumber() {
     return 0;  // default, can be adjusted based on the structure
 }
 
+//Privacy Policy
+window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#4b81e8"
+        }
+      },
+      "position": "bottom-left", // You can adjust this as needed
+      "type": "info", // This makes the banner more unintrusive
+      "content": {
+        "message": "This site uses cookies for analytics and comments.",
+        "dismiss": "Got it!",
+        "link": "Learn More",
+        "href": "/privacy-policy.html" // Link to your privacy policy page
+      }
+    });
+});
+
