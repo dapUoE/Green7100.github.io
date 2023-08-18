@@ -82,3 +82,90 @@ window.addEventListener("load", function(){
     });
 });
 
+
+//Cookie Consent
+window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#edeff5",
+          "text": "#838391"
+        },
+        "button": {
+          "background": "#4b81e8"
+        }
+      },
+      "type": "opt-in",  // This makes sure that cookies are disabled until the user opts-in
+      "position": "bottom-right",
+      "content": {
+        "message": "This site uses cookies for analytics and comments.",
+        "allow": "Allow selected",
+        "deny": "Deny",
+        "link": "Learn More",
+        "href": "/privacy-policy.html",
+        "policy": "Cookie Policy"
+      },
+      "law": {
+        "regionalLaw": false,
+        "countryCode": "US"  // Replace with your country code if not in the US
+      },
+      "onStatusChange": function(status) {
+        // Handle the cookie status (accepted or denied)
+        if (status === "allow") {
+          enableCookies();
+        } else {
+          disableCookies();
+        }
+      },
+      "categories": {
+        "necessary": {
+          "needed": true,
+          "wanted": true,
+          "checked": true
+        },
+        "analytics": {
+          "needed": false,
+          "wanted": false,
+          "checked": false
+        },
+        "comments": {
+          "needed": false,
+          "wanted": false,
+          "checked": false
+        }
+      }
+    });
+});
+
+function enableCookies() {
+    // Enable Google Analytics and Disqus here
+}
+
+function disableCookies() {
+    // Disable Google Analytics and Disqus here
+}
+
+function enableCookies() {
+    // Enable Google Analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'YOUR-GA-CODE', 'auto');
+    ga('send', 'pageview');
+
+    // For Disqus, you'd typically reload the Disqus thread if it's present on the page.
+    if (typeof DISQUS !== 'undefined') {
+        DISQUS.reset({
+            reload: true
+        });
+    }
+}
+
+function disableCookies() {
+    // Disable Google Analytics (prevent further tracking)
+    window['ga-disable-YOUR-GA-CODE'] = true; // Replace 'YOUR-GA-CODE' with your actual GA code
+
+    // For Disqus, you might choose to hide the comments section or display a message
+    // indicating that comments are disabled due to cookie preferences.
+}
