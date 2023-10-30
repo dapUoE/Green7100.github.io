@@ -51,7 +51,7 @@ function attachChapterNavigation(buttonId, actionId) {
                   if (response.ok) {
                       window.location.href = newURL;
                   } else {
-                      window.location.href = '..';
+                      window.location.href = '../ReZero.html';
                   }
               });
           }
