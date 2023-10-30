@@ -25,39 +25,51 @@ function toggleOverlayText(element, event) {
 /* Change chapter numbers */
 
 document.addEventListener('DOMContentLoaded', function() {
-    attachChapterNavigation('prevChapter');
-    attachChapterNavigation('nextChapter');
-    attachChapterNavigation('prevChapterBottom', 'prevChapter');
-    attachChapterNavigation('nextChapterBottom', 'nextChapter');
+  attachChapterNavigation('prevChapter');
+  attachChapterNavigation('nextChapter');
+  attachChapterNavigation('prevChapterBottom', 'prevChapter');
+  attachChapterNavigation('nextChapterBottom', 'nextChapter');
 });
 
 function attachChapterNavigation(buttonId, actionId) {
-    actionId = actionId || buttonId;
-    const button = document.getElementById(buttonId);
+  actionId = actionId || buttonId;
+  const button = document.getElementById(buttonId);
 
-    if (button) {
-        button.addEventListener('click', function() {
-            const currentChapterNumber = getCurrentChapterNumber();
-            if (actionId === 'prevChapter' && currentChapterNumber > 1) {
-                window.location.href = `arc8chapter${currentChapterNumber - 1}.html`;
-            } else if (actionId === 'nextChapter') {
-                window.location.href = `arc8chapter${currentChapterNumber + 1}.html`;
-            }
-        });
-    }
+  if (button) {
+      button.addEventListener('click', function() {
+          const [currentArcNumber, currentChapterNumber] = getCurrentArcAndChapterNumbers();
+          let newURL;
+
+          if (actionId === 'prevChapter' && currentChapterNumber > 1) {
+              newURL = `arc${currentArcNumber}chapter${currentChapterNumber - 1}.html`;
+          } else if (actionId === 'nextChapter') {
+              newURL = `arc${currentArcNumber}chapter${currentChapterNumber + 1}.html`;
+          }
+
+          if (newURL) {
+              fetch(newURL).then(response => {
+                  if (response.ok) {
+                      window.location.href = newURL;
+                  } else {
+                      window.location.href = '..';
+                  }
+              });
+          }
+      });
+  }
 }
 
-
-function getCurrentChapterNumber() {
-    const currentURL = window.location.pathname;
-    const chapterRegex = /arc8chapter(\d+)\.html/;
-    const match = currentURL.match(chapterRegex);
-    
-    if (match && match[1]) {
-        return parseInt(match[1], 10);
-    }
-    return 0;  // default, can be adjusted based on the structure
+function getCurrentArcAndChapterNumbers() {
+  const currentURL = window.location.pathname;
+  const arcChapterRegex = /arc(\d+)chapter(\d+)\.html/;
+  const match = currentURL.match(arcChapterRegex);
+  
+  if (match && match[1] && match[2]) {
+      return [parseInt(match[1], 10), parseInt(match[2], 10)];
+  }
+  return [0, 0];  // default values, can be adjusted based on the structure
 }
+
 
 //Privacy Policy
 window.addEventListener("load", function(){
